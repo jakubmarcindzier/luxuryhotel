@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Wotfard';
+  src: local('Wotfard'), url('../fonts/Wotfard-Light.woff2') format('woff2'), url('../fonts/Wotfard-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Wotfard';
+  src: local('Wotfard'), url('../fonts/Wotfard-SemiBold.woff2') format('woff2'), url('../fonts/Wotfard-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Wotfard';
+  src: local('Wotfard'), url('../fonts/Wotfard-Medium.woff2') format('woff2'), url('../fonts/Wotfard-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Wotfard';
+  src: local('Wotfard'), url('../fonts/Wotfard-Regular.woff2') format('woff2'), url('../fonts/Wotfard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Wotfard';
+  src: local('Wotfard'), url('../fonts/Wotfard-Bold.woff2') format('woff2'), url('../fonts/Wotfard-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root { 
+  --faded: #3aafa91a;
+  --light: #f5f7fc;
+  --slate: #eaedf5;
+  --white: #ffffff;
+  --light-gray: #e6e8ec;
+  --light-slate: #d5e2e9;
+  --dark-gray: #606B72;
+  --placeholders: #b0bec6;
+  --primary: #3aafa9;
+  --secondary: #ffbc01;
+  --black: #000000;
+  --dark: #333a41;
+
+  --font-family: 'Wotfard', Arial, Helvetica, sans-serif;
+ 
+  --font-size-xxxs: 11px;
+  --font-size-xxs: 12px;
+  --font-size-xs: 14px;
+  --font-size-s: 16px;
+  --font-size-m: 18px;
+  --font-size-l: 22px;
+  --font-size-xl: 30px;
+  --font-size-xxl: 34px;
+  --font-size-xxxl: 46px;
+  --font-size-xxxxl: 56px;
+
+  @media only screen and (max-width: 768px) {
+    --font-size-xxxs: 10px;
+    --font-size-xxs: 11px;
+    --font-size-xs: 13px;
+    --font-size-s: 14px;
+    --font-size-m: 17px;
+    --font-size-l: 20px;
+    --font-size-xl: 26px;
+    --font-size-xxl: 30px;
+    --font-size-xxxl: 38px;
+    --font-size-xxxxl: 48px;
+  }
+ 
+  --font-family-font_awesome_5_brands-regular: "Font Awesome 5 Brands-Regular", Helvetica;
+  --font-family-wotfard-bold: "Wotfard-Bold", Helvetica;
+  --font-family-wotfard-extralight: "Wotfard-ExtraLight", Helvetica;
+  --font-family-wotfard-light: "Wotfard-Light", Helvetica;
+  --font-family-wotfard-medium: "Wotfard-Medium", Helvetica;
+  --font-family-wotfard-regular: "Wotfard-Regular", Helvetica;
+  --font-family-wotfard-semibold: "Wotfard-SemiBold", Helvetica;
+}

@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "name": "luxuryhotel",
+  "version": "1.0.0",
+  "description": "LuxuryHotel.com website development",
+  "author": "Ibrim Asanov | NouCoders",
+  "homepage": "https://luxuryhotel.com",
+  "main": "index.js",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "@nuxt/image-edge": "^1.0.0-27840416.dc1ed65",
+    "@pinia/nuxt": "^0.4.6",
+    "@vuepic/vue-datepicker": "^3.6.8",
+    "@vueuse/core": "^9.2.0",
+    "nuxt": "^3.2.2",
+    "nuxt-delay-hydration": "^1.1.4",
+    "nuxt-directus": "^3.2.2",
+    "nuxt-font-loader": "^2.3.0",
+    "nuxt-jsonld": "^2.0.7",
+    "sass": "^1.58.1",
+    "vue-gtag": "^2.0.1",
+    "xmlbuilder2": "^3.0.2"
+  },
+  "dependencies": {
+    "feather-icons": "^4.29.0",
+    "pinia": "^2.0.32",
+    "uikit": "3.14.3",
+    "untyped": "^0.5.0",
+    "v-pagination-3": "^0.1.7",
+    "vue-content-loader": "^2.0.1"
+  },
+  "overrides": {
+    "vue": "latest"
+  }
+}

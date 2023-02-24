@@ -1,0 +1,407 @@
+// 0. Set Globals
+
+:root { 
+  --faded: #3aafa91a;
+  --light: #f5f7fc;
+  --slate: #eaedf5;
+  --white: #ffffff;
+  --light-gray: #e6e8ec;
+  --light-slate: #d5e2e9;
+  --dark-gray: #606B72;
+  --placeholders: #b0bec6;
+  --primary: #3aafa9;
+  --secondary: #ffbc01;
+  --black: #000000;
+  --dark: #333a41;
+
+  --font-family: 'Wotfard', Arial, Helvetica, sans-serif;
+ 
+  --font-size-xxxs: 11px;
+  --font-size-xxs: 12px;
+  --font-size-xs: 14px;
+  --font-size-s: 16px;
+  --font-size-m: 18px;
+  --font-size-l: 22px;
+  --font-size-xl: 30px;
+  --font-size-xxl: 34px;
+  --font-size-xxxl: 46px;
+  --font-size-xxxxl: 56px;
+
+  @media only screen and (max-width: 768px) {
+    --font-size-xxxs: 10px;
+    --font-size-xxs: 11px;
+    --font-size-xs: 13px;
+    --font-size-s: 14px;
+    --font-size-m: 17px;
+    --font-size-l: 20px;
+    --font-size-xl: 26px;
+    --font-size-xxl: 30px;
+    --font-size-xxxl: 38px;
+    --font-size-xxxxl: 48px;
+  }
+ 
+  --font-family-font_awesome_5_brands-regular: "Font Awesome 5 Brands-Regular", Helvetica;
+  --font-family-wotfard-bold: "Wotfard-Bold", Helvetica;
+  --font-family-wotfard-extralight: "Wotfard-ExtraLight", Helvetica;
+  --font-family-wotfard-light: "Wotfard-Light", Helvetica;
+  --font-family-wotfard-medium: "Wotfard-Medium", Helvetica;
+  --font-family-wotfard-regular: "Wotfard-Regular", Helvetica;
+  --font-family-wotfard-semibold: "Wotfard-SemiBold", Helvetica;
+}
+
+// 1. Your custom variables and variable overwrites.
+$base-body-color: var(--dark-gray);
+$base-strong-font-weight: 600;
+$global-font-family: var(--font-family);
+$global-small-font-size: 0.8rem;
+$global-primary-background: #3aafa9;
+$global-border: #d5e2e9;
+$inverse-button-primary-color: var(--dark);
+$global-control-height: 46px;
+$border-rounded-border-radius: 3px;
+$base-heading-color: var(--black);
+$global-link-color: var(--primary);
+$global-muted-color: var(--dark-gray);
+$navbar-nav-item-color: var(--black);
+$global-link-hover-color: var(--primary);
+$base-link-hover-text-decoration: none;
+$navbar-dropdown-margin: 0px;
+$navbar-dropdown-width: 280px;
+$navbar-dropdown-nav-font-size: 14px;
+$navbar-dropdown-box-shadow: none;
+$navbar-dropbar-box-shadow: none;
+$navbar-dropdown-margin: 1px;
+$nav-item-padding-vertical: 6px;
+$navbar-dropdown-nav-item-hover-color: var(--black);
+$breadcrumb-divider: url("data:image/svg+xml,%3Csvg width='5' height='10' viewBox='0 0 5 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 9L4.5 5L0.5 1' stroke='%23606B72' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+$breadcrumb-item-font-size: var(--font-size-s);
+$breadcrumb-divider-margin-horizontal: 10px;
+$breadcrumb-item-color: var(--dark);
+$breadcrumb-item-active-color: var(--dark-gray);
+$inverse-navbar-nav-item-color: #ffffff;
+$inverse-navbar-nav-item-hover-color: #ffffffab;
+$section-padding-vertical-m: 90px;
+$list-divider-margin-top: 10px;
+$notification-message-font-size: var(--font-size-xs);
+$notification-message-background: #cfeae7;
+$global-inverse-color: #fff;
+$inverse-global-color: rgba($global-inverse-color, 0.8);
+$inverse-global-muted-color: rgba($global-inverse-color, 0.65);
+$base-ins-background: #ebf7f6;
+$base-mark-background: #ebf7f6;
+$table-row-active-background: #ebf7f6;
+
+// Inputs
+$form-height: 46px;
+$form-color: var(--dark);
+$form-padding-horizontal: 20px;
+$form-placeholder-color: var(--placeholders);
+$button-padding-horizontal: 50px;
+$button-font-size: 13px;
+$progress-background: #53616a46;
+$progress-height: 8px;
+$progress-margin-vertical: 0px;
+
+// Headings
+$global-2xlarge-font-size: 46px;
+$global-xlarge-font-size: 44px;
+$global-large-font-size: 34px;
+$global-medium-font-size: 30px;
+
+$base-heading-font-weight: 600;
+$base-heading-color: var(--black);
+$base-heading-margin-top: 0px;
+$base-h1-font-size-m: $global-2xlarge-font-size;
+$base-h1-font-size: $base-h1-font-size-m * 0.8;
+$base-h1-line-height: 1.15;
+$base-h2-font-size-m: $global-xlarge-font-size;
+$base-h2-font-size: $base-h2-font-size-m * 0.8;
+$base-h2-line-height: 1.15;
+$base-h3-font-size: var(--font-size-xxl);
+$base-h3-line-height: 1.2;
+$base-h4-font-size: var(--font-size-xl);
+$base-h4-line-height: 1.2;
+$base-h5-font-size: var(--font-size-l);
+$base-h5-line-height: 1.2;
+$base-h6-font-size: var(--font-size-m);
+$base-h6-line-height: 1.2;
+
+// Accordions
+$accordion-title-font-size: var(--font-size-s);
+$accordion-title-line-height: 1.4;
+$accordion-title-color: var(--black);
+
+// Pagination
+$pagination-item-color: var(--dark);
+$pagination-item-padding-vertical: 6px;
+$pagination-item-padding-horizontal: 14px;
+$pagination-item-active-color: var(--white);
+$pagination-item-hover-color: var(--primary);
+
+// Overlay
+$overlay-primary-background: rgba(16,20,19, 0.65);
+
+
+// 2. Import default variables and available mixins.
+@import "../../node_modules/uikit/src/scss/variables-theme.scss";
+@import "../../node_modules/uikit/src/scss/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+@mixin hook-card() { color: #000; }
+
+// 4. Import UIkit.
+@import "../../node_modules/uikit/src/scss/uikit-theme.scss";
+
+// 5. Import Vue Calendar styles.
+@import "../../node_modules/@vuepic/vue-datepicker/src/VueDatePicker/style/main.scss";
+
+
+// 5. Customize
+.centrify {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.stickme {
+  position: sticky;
+  top: 0;
+}
+.bordered {
+  border: 1px solid $global-border;
+}
+.arrowed-btn:after {
+  content: url("data:image/svg+xml,%3Csvg width='17' height='12' viewBox='0 0 17 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.59668 6H16.311' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.4033 1L16.4033 6L11.4033 11' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  margin-left: 6px;
+  transition: all .2s ease;
+}
+.arrowed-btn:hover:after {
+  margin-left: 10px;
+}
+.button-small {
+  padding: 0 25px;
+}
+button, input[type="submit"] {
+  cursor: pointer;
+}
+::placeholder {
+  color: var(--placeholders);
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: var(--placeholders);
+}
+::-ms-input-placeholder {
+  color: var(--placeholders);
+}
+
+.bg-primary {
+  background: var(--primary);
+}
+.bg-secondary {
+  background: var(--secondary);
+}
+.bg-dark {
+  background: var(--dark);
+}
+.bg-black {
+  background: var(--black);
+}
+.bg-faded {
+  background: var(--faded);
+}
+.bg-light {
+  background: var(--light);
+}
+.bg-light-gray {
+  background: var(--light-gray);
+}
+.bg-dark-gray {
+  background: var(--dark-gray);
+}
+.bg-white {
+  background: var(--white);
+}
+.bg-slate {
+  background: var(--slate);
+}
+.bg-transparent {
+  background: transparent;
+}
+
+/* Text Colors */
+.color-white,
+.color-white:hover {
+  color: #ffffff;
+}
+.color-primary {
+  color: var(--primary);
+}
+.color-secondary {
+  color: var(--secondary);
+}
+.color-dark {
+  color: var(--dark);
+}
+.color-black {
+  color: var(--black);
+}
+.color-light-gray {
+  color: var(--light-gray);
+}
+.color-dark-gray {
+  color: var(--dark-gray);
+}
+.color-light-slate {
+  color: var(--light-slate);
+}
+.color-placeholders {
+  color: var(--placeholders);
+}
+
+/* Typography */
+.fw-extralight {
+  font-weight: 200;
+}
+.fw-light {
+  font-weight: 300;
+}
+.fw-regular {
+  font-weight: 400;
+}
+.fw-medium {
+  font-weight: 500;
+}
+.fw-semibold {
+  font-weight: 600;
+}
+.fw-bold {
+  font-weight: 700;
+}
+.fs-xxxs {
+  font-size: var(--font-size-xxxs);
+}
+.fs-xxs {
+  font-size: var(--font-size-xxs);
+}
+.fs-xs {
+  font-size: var(--font-size-xs);
+}
+.fs-s {
+  font-size: var(--font-size-s);
+}
+.fs-m {
+  font-size: var(--font-size-m);
+}
+.fs-l {
+  font-size: var(--font-size-l);
+}
+.fs-xl {
+  font-size: var(--font-size-xl);
+}
+.fs-xxl {
+  font-size: var(--font-size-xxl);
+}
+.fs-xxxl {
+  font-size: var(--font-size-xxxl);
+}
+.fs-xxxxl {
+  font-size: var(--font-size-xxxxl);
+}
+
+// Utilities
+.use-transition {
+  -moz-transition: all .25s ease;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+.highlighted-text {
+  text-decoration: underline;
+  -webkit-text-decoration-color: var(--secondary) !important;
+  text-decoration-color: var(--secondary) !important;
+}
+.underlined-text {
+  border-bottom: 2px solid var(--secondary);
+}
+/* Scrollbar customizations */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--slate);
+  box-shadow: none; 
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--dark-gray); 
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark); 
+}
+.opacity-75 {
+  opacity: .75;
+}
+.opacity-50 {
+  opacity: .5;
+}
+.opacity-25 {
+  opacity: .25;
+}
+.opacity-0 {
+  opacity: 0;
+}
+.border-none {
+  border: none;
+}
+.link-arrowed:hover .arrow-icon--circle {
+  stroke-dashoffset: 0;
+}
+.arrow-icon {
+  position: relative;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  transition-delay: .6s;
+  vertical-align: middle;
+}
+.arrow-icon--circle {
+  transition: stroke-dashoffset .3s ease;
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+}
+.sidebar-box {
+  padding: 30px;
+  border: 1px solid var(--light-gray);
+}
+.sidebar-box > *:last-child {
+  margin-bottom: 0;
+}
+
+// Inputs
+.uk-input,
+.uk-textarea,
+.uk-button {
+  border-radius: 3px;
+}
+.uk-input,
+.uk-textarea {
+  font-size: 14px;
+}
+.uk-button {
+  font-weight: 600;
+  letter-spacing: .75px;
+}
+
+// Pagination
+.uk-pagination>.uk-active>* {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+@media only screen and (max-width: 768px) {
+  .uk-margin-medium-bottom {
+    margin-bottom: 25px !important;
+  }
+}
